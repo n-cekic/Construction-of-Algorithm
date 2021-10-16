@@ -70,22 +70,6 @@ public:
 
             path_found[temp.second] = true;
 
-
-
-    //          for (std::pair<int, int> &neighbour : adjacency_list[temp.second]) {
-    //     // Ako preko cvora tmp imamo kraci put do nekog suseda onda
-    //     // azuriramo najkraci put do tog suseda i dodajemo ga na heap
-    //     // Druga opcija je da imamo put jednake tezine koji sadrzi
-    //     // manje grana
-    //     if (!path_found[neighbour.first] &&
-    //         distances[neighbour.first] > distances[temp.second] + neighbour.second) {
-    //       // Azuriramo tezinu puta do cvora neighbour
-    //       distances[neighbour.first] = distances[temp.second] + neighbour.second;
-    //       // Dodajemo cvor neighbour zajedno sa novom tezinom puta u heap
-    //       heap.push(std::make_pair(distances[neighbour.first], neighbour.first));
-    //     }
-    //   }
-
             for (std::pair<int, int> &neighbour : adjacency_list[temp.second])
             {
                 if (!path_found[neighbour.first]
